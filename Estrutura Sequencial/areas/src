@@ -1,0 +1,36 @@
+import java.util.Locale;
+import java.util.Scanner;
+import static java.lang.Math.PI;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Locale.setDefault(Locale.US);
+
+        Scanner sc = new Scanner(System.in);
+
+        double a, b, c, triangulo, circulo, trapezio, quadrado, retangulo;
+
+        System.out.print("Insira o valor de A: ");
+        a = sc.nextDouble();
+        System.out.print("Insira o valor de B: ");
+        b = sc.nextDouble();
+        System.out.print("Insira o valor de C: ");
+        c = sc.nextDouble();
+
+        triangulo =  (a * c) / 2.0;
+        circulo = Math.PI * c * c;
+        trapezio = (a + b) * c / 2.0;;
+        quadrado = b * b;
+        retangulo = a * b;
+
+        System.out.printf("%nTriângulo: %.3f %n",  triangulo);
+        System.out.printf("Círculo: %.3f %n", circulo);
+        System.out.printf("Trapézio: %.3f %n", trapezio);
+        System.out.printf("Quadrado: %.3f %n", quadrado);
+        System.out.printf("Retângulo: %.3f %n", retangulo);
+
+        sc.close();
+
+    }
+}

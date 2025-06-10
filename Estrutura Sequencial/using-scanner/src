@@ -1,0 +1,43 @@
+package course;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);	// padronizar o sistema para USA
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter you full name: ");
+		
+		String name = sc.nextLine();
+		
+		System.out.println("How many bedrooms are there in your house?");
+		
+		int numBedRooms = sc.nextInt();
+		
+		System.out.println("Enter your product price:");
+		
+		double prodPrice = sc.nextDouble();
+		
+		System.out.println("Enter your last name, age and height (same line):");
+		
+		String lastName = sc.next();
+		int age = sc.nextInt();
+		double heigh = sc.nextDouble();
+		
+		System.out.println(name);
+		System.out.println(numBedRooms);
+		System.out.println(prodPrice);
+		System.out.println(lastName);
+		System.out.println(age);
+		System.out.println(heigh);
+		
+		sc.close();    // comando para fechar o scanner
+		
+	}
+
+}

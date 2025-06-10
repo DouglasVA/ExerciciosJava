@@ -1,0 +1,53 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner scanner = new Scanner(System.in);
+
+        double valorA = lerValor(scanner, "Insira o valor de A: ");
+        double valorB = lerValor(scanner, "Insira o valor de B: ");
+        double valorC = lerValor(scanner, "Insira o valor de C: ");
+
+        exibirResultados(valorA, valorB, valorC);
+
+        scanner.close();
+    }
+
+    public static double lerValor(Scanner scanner, String mensagem) {
+        System.out.print(mensagem);
+        return scanner.nextDouble();
+    }
+
+    public static void exibirResultados(double a, double b, double c) {
+        System.out.println();
+
+        System.out.printf("Triângulo: %.3f%n", calcularAreaTriangulo(a, c));
+        System.out.printf("Círculo: %.3f%n", calcularAreaCirculo(c));
+        System.out.printf("Trapézio: %.3f%n", calcularAreaTrapezio(a, b, c));
+        System.out.printf("Quadrado: %.3f%n", calcularAreaQuadrado(b));
+        System.out.printf("Retângulo: %.3f%n", calcularAreaRetangulo(a, b));
+    }
+
+    public static double calcularAreaTriangulo(double base, double altura) {
+        return (base * altura) / 2.0;
+    }
+
+    public static double calcularAreaCirculo(double raio) {
+        return Math.PI * raio * raio;
+    }
+
+    public static double calcularAreaTrapezio(double baseMaior, double baseMenor, double altura) {
+        return (baseMaior + baseMenor) * altura / 2.0;
+    }
+
+    public static double calcularAreaQuadrado(double lado) {
+        return lado * lado;
+    }
+
+    public static double calcularAreaRetangulo(double base, double altura) {
+        return base * altura;
+    }
+}

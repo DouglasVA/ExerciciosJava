@@ -1,0 +1,36 @@
+package course;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+	
+	public static void main(String[] args) {
+
+	Locale.setDefault(Locale.US);
+	
+	Scanner sc = new Scanner(System.in);
+		
+	int id1, id2, qntPeca, qntPeca1;
+	double valor1, valor2, pagar;	
+	
+	id1 = sc.nextInt();
+	qntPeca = sc.nextInt();
+	valor1 = sc.nextDouble();
+	
+	id2 = sc.nextInt();
+	qntPeca1 = sc.nextInt();
+	valor2 = sc.nextDouble();
+	
+	pagar = (qntPeca * valor1) + (qntPeca1 * valor2);
+	
+	System.out.println("");
+	System.out.printf("Identificação da 1ª peça: " + id1);
+	System.out.printf("%nIdentificação da 2ª peça: " + id2);
+	System.out.println("");
+	System.out.printf("%nValor a pagar: R$ %.2f ", pagar);
+	
+	sc.close();
+		
+	}
+}

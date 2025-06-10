@@ -1,0 +1,31 @@
+package course;
+
+import java.util.Locale;
+
+public class Program {
+	
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);	// deixa US como idioma padrão
+		
+		String original = "abcde FGHJ ABC abc DEFG    "; 
+		String s01 = original.toLowerCase();	// Deixa tudo caixa baixa
+		String s02 = original.toUpperCase();	// Deixa tudo caixa alta
+		String s03 = original.trim();	// deixa do jeito q escreveram
+		String s04 = original.substring(2);	// monstra o caractere na posição 2
+		String s05 = original.substring(2, 9);	// mostra o conteudo do caracter na posição 2 ao caracter na posição 9
+		String s06 = original.replace('a', 'x');	// troca a letra a da string por x
+		String s07 = original.replace("abc", "xy");	// troca as letras abc por xy na string
+		
+		
+		System.out.println("Original: " + original);
+		System.out.println("Lower case: " + s01);
+		System.out.println("Upper case: " + s02);
+		System.out.println("Trim: " + s03);
+		System.out.println("Substring(2): " + s04);
+		System.out.println("Substring('a', 'x'): " + s05);
+		System.out.println("Replace('a', 'x'): " + s06);
+		System.out.println("Replace('abc', 'x'): " + s07);
+		
+	}
+}
