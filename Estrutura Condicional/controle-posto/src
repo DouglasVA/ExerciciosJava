@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int alcool = 0, gasolina = 0, diesel = 0, codigo;
+
+        System.out.printf("1. Álcool %n2. Gasolina %n3. Diesel %n4. Fim %n");
+        System.out.printf("%nDigite um código: ");
+        codigo = sc.nextInt();
+
+        while (codigo != 4) {
+            if (codigo == 1) {
+                System.out.printf("Digite um código: ");
+                codigo = sc.nextInt();
+                alcool += 1;
+            } else if (codigo == 2) {
+                System.out.printf("Digite um código: ");
+                codigo = sc.nextInt();
+                gasolina += 1;
+            } else if (codigo == 3) {
+                System.out.printf("Digite um código: ");
+                codigo = sc.nextInt();
+                diesel += 1;
+            } else {
+                System.out.print("Digite um código válido: ");
+                codigo = sc.nextInt();
+            }
+        }
+
+        System.out.printf("%nMuito obrigado!%n");
+        System.out.println("Álcool: " + alcool);
+        System.out.println("Gasolina: " + gasolina);
+        System.out.println("Diesel: " + diesel);
+
+        sc.close();
+    }
+}
